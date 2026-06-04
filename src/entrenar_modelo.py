@@ -33,7 +33,7 @@ def entrenar_modelo():
     modelo = Pipeline(
         steps=[
             ("escalado", StandardScaler()),
-            ("clasificador", LogisticRegression())
+            ("clasificador", LogisticRegression(solver="liblinear"))
         ]
     )
 

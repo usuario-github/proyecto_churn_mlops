@@ -1,0 +1,1 @@
+## Nota sobre trazabilidad

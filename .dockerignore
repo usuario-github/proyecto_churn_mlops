@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# Entorno virtual
+.venv
+venv
+
+# Caché de Python
+__pycache__
+*.pyc
+*.pyo
+
+# Caché de pruebas
+.pytest_cache
+
+# Archivos generados localmente
+data/*.csv
+models/*.pkl
+
+# Configuración local
+.env
+.vscode
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

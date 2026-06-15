@@ -1,0 +1,15 @@
+{
+  "version_modelo": "modelo_churn_v1",
+  "archivo_modelo": "modelo_churn_v1.joblib",
+  "variables_entrada": [
+    "antiguedad",
+    "cargo_mensual",
+    "reclamos"
+  ],
+  "version_sklearn": "1.8.0",
+  "metricas": {
+    "accuracy": 0.825,
+    "f1_score": 0.8659,
+    "auc_roc": 0.8749
+  }
+}

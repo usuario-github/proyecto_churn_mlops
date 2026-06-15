@@ -1,21 +1,7 @@
-# Métricas del modelo de churn
+# Métricas del modelo
 
-## Resultados principales
-
-| Métrica | Valor |
-|---|---:|
-| Accuracy | 1.0000 |
-| Precision | 1.0000 |
-| Recall | 1.0000 |
-| F1-score | 1.0000 |
-| ROC-AUC | 1.0000 |
-
-## Interpretación inicial
-
-Estas métricas permiten evaluar el desempeño inicial del modelo de clasificación.
-
-- Accuracy indica el porcentaje general de aciertos.
-- Precision indica qué tan confiables son las predicciones positivas.
-- Recall indica qué proporción de clientes con churn fueron identificados.
-- F1-score resume precision y recall en una sola métrica.
-- ROC-AUC mide la capacidad del modelo para separar las clases. Un valor de 0.5 equivale a azar; 1.0 es perfecto.
+- Modelo: `modelo_churn_v1.joblib`
+- Accuracy: 0.825
+- F1-score: 0.8659
+- AUC-ROC: 0.8749
+- Versión scikit-learn: 1.8.0

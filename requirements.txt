@@ -1,7 +1,15 @@
+fastapi[standard] 
+numpy
 pandas
 scikit-learn
 joblib
-fastapi
-uvicorn
 pytest
 httpx
+
+#pandas
+#scikit-learn
+#joblib
+#fastapi
+#uvicorn
+#pytest
+#httpx

@@ -1,26 +1,21 @@
-# Git
-.git
-.gitignore
-
-# Entorno virtual
-.venv
-venv
+# Entorno virtual local
+.venv/
 
 # Caché de Python
-__pycache__
+__pycache__/
 *.pyc
 *.pyo
 
-# Caché de pruebas
-.pytest_cache
+# Caché de notebooks
+.ipynb_checkpoints/
 
-# Archivos generados localmente
-data/*.csv
-models/*.pkl
+# Git
+.git/
+.gitignore
 
-# Configuración local
-.env
-.vscode
+# Archivos temporales
+*.tmp
+*.log
 
 # Sistema operativo
 .DS_Store

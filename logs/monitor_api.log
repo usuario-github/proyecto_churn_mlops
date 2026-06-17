@@ -1,0 +1,222 @@
+2026-06-17 17:10:59,129 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 17:11:01,892 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 17:11:15,859 | INFO | Solicitud | metodo=GET | ruta=/ | estado=200 | latencia_ms=6.003
+2026-06-17 17:11:15,936 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.420
+2026-06-17 17:12:00,400 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 17:12:02,538 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 17:12:06,733 | INFO | Solicitud | metodo=GET | ruta=/ | estado=200 | latencia_ms=4.446
+2026-06-17 17:12:06,763 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.565
+2026-06-17 17:13:12,120 | INFO | Solicitud | metodo=GET | ruta=/health | estado=200 | latencia_ms=3.892
+2026-06-17 17:13:12,176 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.520
+2026-06-17 17:13:19,699 | INFO | Solicitud | metodo=GET | ruta=/metrics | estado=200 | latencia_ms=3.485
+2026-06-17 17:13:19,767 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.439
+2026-06-17 17:13:29,966 | INFO | Solicitud | metodo=GET | ruta=/docs | estado=200 | latencia_ms=0.306
+2026-06-17 17:13:30,244 | INFO | Solicitud | metodo=GET | ruta=/openapi.json | estado=200 | latencia_ms=12.417
+2026-06-17 17:14:11,477 | INFO | Predicción | resultado=alto_riesgo | probabilidad=0.8700 | alertas=0
+2026-06-17 17:14:11,478 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=200 | latencia_ms=4.266
+2026-06-17 17:15:51,043 | WARNING | Valores fuera de rango histórico: ['antiguedad=180 fuera del rango histórico [1, 72]', 'cargo_mensual=600.0 fuera del rango histórico [20.0, 150.0]', 'reclamos=35 fuera del rango histórico [0, 7]']
+2026-06-17 17:15:51,044 | INFO | Predicción | resultado=alto_riesgo | probabilidad=1.0000 | alertas=3
+2026-06-17 17:15:51,045 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=200 | latencia_ms=3.271
+2026-06-17 17:17:15,422 | WARNING | Error de validación | ruta=/predict | detalle=[{'type': 'missing', 'loc': ('body', 'reclamos'), 'msg': 'Field required', 'input': {'antiguedad': 36, 'cargo_mensual': 60.5}}]
+2026-06-17 17:17:15,422 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=422 | latencia_ms=1.517
+2026-06-17 17:19:20,232 | WARNING | Error de validación | ruta=/predict | detalle=[{'type': 'greater_than_equal', 'loc': ('body', 'cargo_mensual'), 'msg': 'Input should be greater than or equal to 0', 'input': -50, 'ctx': {'ge': 0.0}}]
+2026-06-17 17:19:20,232 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=422 | latencia_ms=1.301
+2026-06-17 17:20:23,766 | INFO | Solicitud | metodo=GET | ruta=/metrics | estado=200 | latencia_ms=1.926
+2026-06-17 17:20:23,829 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.265
+2026-06-17 17:21:39,777 | INFO | 1 change detected
+2026-06-17 17:21:40,135 | INFO | 1 change detected
+2026-06-17 17:21:40,495 | INFO | 1 change detected
+2026-06-17 17:21:40,905 | INFO | 1 change detected
+2026-06-17 17:21:41,310 | INFO | 1 change detected
+2026-06-17 17:21:41,719 | INFO | 1 change detected
+2026-06-17 17:21:42,122 | INFO | 1 change detected
+2026-06-17 17:21:42,527 | INFO | 1 change detected
+2026-06-17 17:21:42,933 | INFO | 1 change detected
+2026-06-17 17:21:43,339 | INFO | 1 change detected
+2026-06-17 17:21:43,743 | INFO | 1 change detected
+2026-06-17 17:21:44,147 | INFO | 1 change detected
+2026-06-17 17:21:44,551 | INFO | 1 change detected
+2026-06-17 17:21:44,954 | INFO | 1 change detected
+2026-06-17 17:21:45,356 | INFO | 1 change detected
+2026-06-17 17:21:45,762 | INFO | 1 change detected
+2026-06-17 17:21:46,169 | INFO | 1 change detected
+2026-06-17 17:21:46,573 | INFO | 1 change detected
+2026-06-17 17:21:46,977 | INFO | 1 change detected
+2026-06-17 17:21:47,378 | INFO | 1 change detected
+2026-06-17 17:21:47,779 | INFO | 1 change detected
+2026-06-17 17:21:48,185 | INFO | 1 change detected
+2026-06-17 17:21:48,602 | INFO | 1 change detected
+2026-06-17 17:21:49,009 | INFO | 1 change detected
+2026-06-17 17:21:49,414 | INFO | 1 change detected
+2026-06-17 17:21:49,818 | INFO | 1 change detected
+2026-06-17 17:21:50,224 | INFO | 1 change detected
+2026-06-17 17:21:50,629 | INFO | 1 change detected
+2026-06-17 17:21:51,033 | INFO | 1 change detected
+2026-06-17 17:21:51,391 | INFO | 1 change detected
+2026-06-17 17:21:51,797 | INFO | 1 change detected
+2026-06-17 17:21:52,201 | INFO | 1 change detected
+2026-06-17 17:21:52,606 | INFO | 1 change detected
+2026-06-17 17:21:53,013 | INFO | 1 change detected
+2026-06-17 17:21:53,418 | INFO | 1 change detected
+2026-06-17 17:21:53,822 | INFO | 1 change detected
+2026-06-17 17:21:54,227 | INFO | 1 change detected
+2026-06-17 17:21:54,634 | INFO | 1 change detected
+2026-06-17 17:21:55,040 | INFO | 1 change detected
+2026-06-17 17:21:55,447 | INFO | 1 change detected
+2026-06-17 17:21:55,851 | INFO | 1 change detected
+2026-06-17 17:21:56,210 | INFO | 1 change detected
+2026-06-17 17:21:56,621 | INFO | 1 change detected
+2026-06-17 17:21:57,023 | INFO | 1 change detected
+2026-06-17 17:21:57,431 | INFO | 1 change detected
+2026-06-17 17:21:57,833 | INFO | 1 change detected
+2026-06-17 17:21:58,237 | INFO | 1 change detected
+2026-06-17 17:21:58,641 | INFO | 1 change detected
+2026-06-17 17:21:59,057 | INFO | 1 change detected
+2026-06-17 17:21:59,458 | INFO | 1 change detected
+2026-06-17 17:21:59,862 | INFO | 1 change detected
+2026-06-17 17:22:00,278 | INFO | 1 change detected
+2026-06-17 17:22:00,643 | INFO | 1 change detected
+2026-06-17 17:22:01,048 | INFO | 1 change detected
+2026-06-17 17:22:01,456 | INFO | 1 change detected
+2026-06-17 17:22:01,860 | INFO | 1 change detected
+2026-06-17 17:22:02,266 | INFO | 1 change detected
+2026-06-17 17:22:02,670 | INFO | 1 change detected
+2026-06-17 17:22:03,076 | INFO | 1 change detected
+2026-06-17 17:22:03,481 | INFO | 1 change detected
+2026-06-17 17:22:03,889 | INFO | 1 change detected
+2026-06-17 17:22:04,294 | INFO | 1 change detected
+2026-06-17 17:22:04,711 | INFO | 1 change detected
+2026-06-17 17:22:05,117 | INFO | 1 change detected
+2026-06-17 17:22:05,522 | INFO | 1 change detected
+2026-06-17 17:22:05,928 | INFO | 1 change detected
+2026-06-17 17:22:06,335 | INFO | 1 change detected
+2026-06-17 17:22:06,738 | INFO | 1 change detected
+2026-06-17 17:22:07,145 | INFO | 1 change detected
+2026-06-17 17:22:07,549 | INFO | 1 change detected
+2026-06-17 17:22:07,955 | INFO | 1 change detected
+2026-06-17 17:22:08,358 | INFO | 1 change detected
+2026-06-17 17:22:08,765 | INFO | 1 change detected
+2026-06-17 17:22:09,170 | INFO | 1 change detected
+2026-06-17 17:22:09,525 | INFO | 1 change detected
+2026-06-17 17:22:09,934 | INFO | 1 change detected
+2026-06-17 17:22:10,340 | INFO | 1 change detected
+2026-06-17 17:22:10,742 | INFO | 1 change detected
+2026-06-17 17:22:11,149 | INFO | 1 change detected
+2026-06-17 17:22:11,554 | INFO | 1 change detected
+2026-06-17 17:22:11,957 | INFO | 1 change detected
+2026-06-17 17:22:12,363 | INFO | 1 change detected
+2026-06-17 17:22:12,765 | INFO | 1 change detected
+2026-06-17 17:22:13,169 | INFO | 1 change detected
+2026-06-17 17:22:13,576 | INFO | 1 change detected
+2026-06-17 17:22:13,979 | INFO | 1 change detected
+2026-06-17 17:22:14,384 | INFO | 1 change detected
+2026-06-17 17:22:14,790 | INFO | 1 change detected
+2026-06-17 17:22:15,195 | INFO | 1 change detected
+2026-06-17 17:22:15,554 | INFO | 1 change detected
+2026-06-17 17:22:15,964 | INFO | 1 change detected
+2026-06-17 17:22:16,371 | INFO | 1 change detected
+2026-06-17 17:22:16,774 | INFO | 1 change detected
+2026-06-17 17:22:17,177 | INFO | 1 change detected
+2026-06-17 17:22:17,583 | INFO | 1 change detected
+2026-06-17 17:22:17,999 | INFO | 1 change detected
+2026-06-17 17:22:18,407 | INFO | 1 change detected
+2026-06-17 17:22:18,813 | INFO | 1 change detected
+2026-06-17 17:22:19,217 | INFO | 1 change detected
+2026-06-17 17:22:19,623 | INFO | 1 change detected
+2026-06-17 17:22:20,029 | INFO | 1 change detected
+2026-06-17 17:22:20,433 | INFO | 1 change detected
+2026-06-17 17:22:20,837 | INFO | 1 change detected
+2026-06-17 17:22:21,244 | INFO | 1 change detected
+2026-06-17 17:22:21,646 | INFO | 1 change detected
+2026-06-17 17:22:22,051 | INFO | 1 change detected
+2026-06-17 17:22:22,456 | INFO | 1 change detected
+2026-06-17 17:22:22,859 | INFO | 1 change detected
+2026-06-17 17:22:23,264 | INFO | 1 change detected
+2026-06-17 17:22:23,669 | INFO | 1 change detected
+2026-06-17 17:22:24,022 | INFO | 1 change detected
+2026-06-17 17:22:24,429 | INFO | 1 change detected
+2026-06-17 17:22:24,833 | INFO | 1 change detected
+2026-06-17 17:22:25,239 | INFO | 1 change detected
+2026-06-17 17:22:25,645 | INFO | 1 change detected
+2026-06-17 17:22:26,052 | INFO | 1 change detected
+2026-06-17 17:22:26,456 | INFO | 1 change detected
+2026-06-17 17:22:26,859 | INFO | 1 change detected
+2026-06-17 17:22:27,264 | INFO | 1 change detected
+2026-06-17 17:22:27,670 | INFO | 1 change detected
+2026-06-17 17:22:28,072 | INFO | 1 change detected
+2026-06-17 17:22:28,475 | INFO | 1 change detected
+2026-06-17 17:22:28,878 | INFO | 1 change detected
+2026-06-17 17:22:29,283 | INFO | 1 change detected
+2026-06-17 17:22:29,686 | INFO | 1 change detected
+2026-06-17 17:22:30,091 | INFO | 1 change detected
+2026-06-17 17:22:30,496 | INFO | 1 change detected
+2026-06-17 17:22:30,901 | INFO | 1 change detected
+2026-06-17 17:22:31,304 | INFO | 1 change detected
+2026-06-17 17:22:31,708 | INFO | 1 change detected
+2026-06-17 17:22:32,113 | INFO | 1 change detected
+2026-06-17 17:22:32,518 | INFO | 1 change detected
+2026-06-17 17:22:32,921 | INFO | 1 change detected
+2026-06-17 17:22:33,326 | INFO | 1 change detected
+2026-06-17 17:22:33,729 | INFO | 1 change detected
+2026-06-17 17:22:34,137 | INFO | 1 change detected
+2026-06-17 17:22:34,541 | INFO | 1 change detected
+2026-06-17 17:22:34,947 | INFO | 1 change detected
+2026-06-17 17:22:35,354 | INFO | 1 change detected
+2026-06-17 17:22:35,758 | INFO | 1 change detected
+2026-06-17 17:22:36,164 | INFO | 1 change detected
+2026-06-17 17:22:36,569 | INFO | 1 change detected
+2026-06-17 17:22:36,971 | INFO | 1 change detected
+2026-06-17 17:22:37,380 | INFO | 1 change detected
+2026-06-17 17:22:37,783 | INFO | 1 change detected
+2026-06-17 17:22:38,187 | INFO | 1 change detected
+2026-06-17 17:22:38,595 | INFO | 1 change detected
+2026-06-17 17:22:39,010 | INFO | 1 change detected
+2026-06-17 17:22:39,419 | INFO | 1 change detected
+2026-06-17 17:22:39,824 | INFO | 1 change detected
+2026-06-17 17:22:40,228 | INFO | 1 change detected
+2026-06-17 17:22:40,632 | INFO | 1 change detected
+2026-06-17 17:22:41,039 | INFO | 1 change detected
+2026-06-17 17:22:41,444 | INFO | 1 change detected
+2026-06-17 17:22:41,851 | INFO | 1 change detected
+2026-06-17 17:22:42,254 | INFO | 1 change detected
+2026-06-17 17:22:42,658 | INFO | 1 change detected
+2026-06-17 17:22:43,064 | INFO | 1 change detected
+2026-06-17 17:22:43,420 | INFO | 1 change detected
+2026-06-17 17:22:43,884 | INFO | 1 change detected
+2026-06-17 17:22:44,286 | INFO | 1 change detected
+2026-06-17 17:22:44,694 | INFO | 1 change detected
+2026-06-17 17:22:45,052 | INFO | 1 change detected
+2026-06-17 17:22:45,455 | INFO | 1 change detected
+2026-06-17 17:22:45,861 | INFO | 1 change detected
+2026-06-17 17:22:46,266 | INFO | 1 change detected
+2026-06-17 17:22:46,672 | INFO | 1 change detected
+2026-06-17 17:22:47,081 | INFO | 1 change detected
+2026-06-17 17:22:47,487 | INFO | 1 change detected
+2026-06-17 17:22:47,892 | INFO | 1 change detected
+2026-06-17 17:22:48,297 | INFO | 1 change detected
+2026-06-17 17:22:48,703 | INFO | 1 change detected
+2026-06-17 17:22:49,110 | INFO | 1 change detected
+2026-06-17 17:22:49,516 | INFO | 1 change detected
+2026-06-17 17:22:49,921 | INFO | 1 change detected
+2026-06-17 17:22:50,325 | INFO | 1 change detected
+2026-06-17 17:22:50,727 | INFO | 1 change detected
+2026-06-17 17:22:51,135 | INFO | 1 change detected
+2026-06-17 17:22:51,542 | INFO | 1 change detected
+2026-06-17 17:22:51,902 | INFO | 2 changes detected
+2026-06-17 17:22:52,937 | INFO | 1 change detected
+2026-06-17 17:22:55,618 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 17:23:57,337 | INFO | 1 change detected
+2026-06-17 17:23:58,160 | INFO | 1 change detected
+2026-06-17 17:24:00,722 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 17:24:24,375 | INFO | Predicción | resultado=bajo_riesgo | probabilidad=0.0725 | alertas=0
+2026-06-17 17:24:24,376 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=200 | latencia_ms=5.690
+2026-06-17 17:24:24,396 | INFO | Predicción | resultado=alto_riesgo | probabilidad=0.8848 | alertas=0
+2026-06-17 17:24:24,398 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=200 | latencia_ms=4.425
+2026-06-17 17:24:24,426 | INFO | Predicción | resultado=alto_riesgo | probabilidad=0.9978 | alertas=0
+2026-06-17 17:24:24,428 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=200 | latencia_ms=3.958
+2026-06-17 17:24:24,456 | WARNING | Valores fuera de rango histórico: ['antiguedad=180 fuera del rango histórico [1, 72]', 'cargo_mensual=600.0 fuera del rango histórico [20.0, 150.0]', 'reclamos=35 fuera del rango histórico [0, 7]']
+2026-06-17 17:24:24,457 | INFO | Predicción | resultado=alto_riesgo | probabilidad=1.0000 | alertas=3
+2026-06-17 17:24:24,458 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=200 | latencia_ms=3.965
+2026-06-17 17:24:24,486 | WARNING | Error de validación | ruta=/predict | detalle=[{'type': 'greater_than_equal', 'loc': ('body', 'cargo_mensual'), 'msg': 'Input should be greater than or equal to 0', 'input': -50.0, 'ctx': {'ge': 0.0}}]
+2026-06-17 17:24:24,486 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=422 | latencia_ms=1.651
+2026-06-17 17:24:24,494 | INFO | Solicitud | metodo=GET | ruta=/metrics | estado=200 | latencia_ms=1.770

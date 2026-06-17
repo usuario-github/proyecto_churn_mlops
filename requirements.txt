@@ -5,6 +5,7 @@ scikit-learn
 joblib
 pytest
 httpx
+requests
 
 #pandas
 #scikit-learn

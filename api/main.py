@@ -9,7 +9,7 @@ from pathlib import Path
 
 import joblib
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = PROJECT_ROOT / "models" / "modelo_churn_v1.joblib"
@@ -47,6 +47,14 @@ class ClienteEntrada(BaseModel):
         description="Cantidad de reclamos recientes",
         examples=[3],
     )
+
+    @model_validator(mode="after")
+    def validar_coherencia(self) -> "ClienteEntrada":
+        if self.antiguedad == 0 and self.reclamos > 0:
+            raise ValueError(
+                "Un cliente nuevo (antiguedad=0) no puede tener reclamos previos."
+            )
+        return self
 
 class PrediccionSalida(BaseModel):
     prediccion: str

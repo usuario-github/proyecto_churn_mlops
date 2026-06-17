@@ -53,7 +53,7 @@ from fastapi.exceptions import RequestValidationError
 # Representa errores como campos faltantes, valores negativos
 # o tipos de datos incorrectos.
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 # BaseModel define la estructura esperada de los datos.
 # Field agrega reglas de validación.
 
@@ -199,6 +199,14 @@ class ClienteEntrada(BaseModel):
     antiguedad: int = Field(..., ge=0, le=240)
     cargo_mensual: float = Field(..., ge=0, le=5000)
     reclamos: int = Field(..., ge=0, le=100)
+
+    @model_validator(mode="after")
+    def validar_coherencia(self) -> "ClienteEntrada":
+        if self.antiguedad == 0 and self.reclamos > 0:
+            raise ValueError(
+                "Un cliente nuevo (antiguedad=0) no puede tener reclamos previos."
+            )
+        return self
 
 class PrediccionSalida(BaseModel):
     """

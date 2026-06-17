@@ -1,27 +1,37 @@
 from pathlib import Path
 
 import joblib
-import pandas as pd
+import numpy as np
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
+from sklearn.model_selection import train_test_split
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = BASE_DIR / "data"
 MODELS_DIR = BASE_DIR / "models"
 DOCS_DIR = BASE_DIR / "docs"
 
-TEST_DATA = DATA_DIR / "test.csv"
-MODEL_FILE = MODELS_DIR / "modelo_churn.pkl"
+MODEL_FILE = MODELS_DIR / "modelo_churn_v1.joblib"
 METRICS_FILE = DOCS_DIR / "metricas_modelo.md"
+
+def _generar_datos_test() -> tuple[np.ndarray, np.ndarray]:
+    """Reproduce el mismo conjunto de prueba generado en entrenar_modelo.py."""
+    rng = np.random.default_rng(seed=42)
+    n = 800
+    antiguedad = rng.integers(1, 73, size=n)
+    cargo_mensual = rng.uniform(20, 150, size=n)
+    reclamos = rng.integers(0, 8, size=n)
+    puntaje = -0.045 * antiguedad + 0.025 * cargo_mensual + 0.65 * reclamos - 1.8
+    prob = 1 / (1 + np.exp(-puntaje))
+    churn = rng.binomial(1, prob)
+    X = np.column_stack([antiguedad, cargo_mensual, reclamos])
+    _, X_test, _, y_test = train_test_split(
+        X, churn, test_size=0.25, random_state=42, stratify=churn
+    )
+    return X_test, y_test
 
 def evaluar_modelo():
     """
     Evalúa el modelo entrenado y guarda las métricas principales.
     """
-
-    if not TEST_DATA.exists():
-        raise FileNotFoundError(
-            "No se encontró data/test.csv. Primero ejecuta src/preparar_datos.py"
-        )
 
     if not MODEL_FILE.exists():
         raise FileNotFoundError(
@@ -30,10 +40,7 @@ def evaluar_modelo():
 
     DOCS_DIR.mkdir(exist_ok=True)
 
-    df = pd.read_csv(TEST_DATA)
-
-    X_test = df.drop(columns=["churn"])
-    y_test = df["churn"]
+    X_test, y_test = _generar_datos_test()
 
     modelo = joblib.load(MODEL_FILE)
 

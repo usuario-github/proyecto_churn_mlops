@@ -220,3 +220,13 @@
 2026-06-17 17:24:24,486 | WARNING | Error de validación | ruta=/predict | detalle=[{'type': 'greater_than_equal', 'loc': ('body', 'cargo_mensual'), 'msg': 'Input should be greater than or equal to 0', 'input': -50.0, 'ctx': {'ge': 0.0}}]
 2026-06-17 17:24:24,486 | INFO | Solicitud | metodo=POST | ruta=/predict | estado=422 | latencia_ms=1.651
 2026-06-17 17:24:24,494 | INFO | Solicitud | metodo=GET | ruta=/metrics | estado=200 | latencia_ms=1.770
+2026-06-17 18:19:25,969 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 18:21:15,646 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 18:24:22,370 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 18:24:25,110 | INFO | Modelo cargado correctamente: modelo_churn_v1
+2026-06-17 18:24:41,706 | INFO | Solicitud | metodo=GET | ruta=/ | estado=200 | latencia_ms=4.901
+2026-06-17 18:24:41,744 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.503
+2026-06-17 18:24:42,917 | INFO | Solicitud | metodo=GET | ruta=/ | estado=200 | latencia_ms=1.984
+2026-06-17 18:24:42,960 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.371
+2026-06-17 18:25:01,658 | INFO | Solicitud | metodo=GET | ruta=/health | estado=200 | latencia_ms=1.528
+2026-06-17 18:25:01,736 | INFO | Solicitud | metodo=GET | ruta=/favicon.ico | estado=404 | latencia_ms=0.398
